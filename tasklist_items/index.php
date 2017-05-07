@@ -20,7 +20,7 @@ if($action == "show_login_page")
    $result2 = done_Items($_COOKIE['my_id']);
     include('list_item.php');
   }else{
-    header("Location: ../error/badinfo.php");
+    header("Location: ../exception/incorrect.php");
   }
 }else if ($action == 'register')
 {
@@ -37,9 +37,9 @@ if($action == "show_login_page")
        if($exit == true)
        {
      
-        header("Location: ../error/userexist.php");
+        header("Location: ../exception/existinguser.php");
    }else{
-       header("Location: ../index.php");
+       header("Location: ../login.php");
 
    }
   }
