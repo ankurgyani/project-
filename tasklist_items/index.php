@@ -43,6 +43,23 @@ if($action == "show_login_page")
 
    }
   }
+  else if ($action == 'add')
+{
+ $user_id = filter_input(INPUT_POST, 'userid',FILTER_VALIDATE_INT);
+ $task = filter_input(INPUT_POST, 'task');
+ $description = filter_input(INPUT_POST, 'description');
+ $date = filter_input(INPUT_POST, 'datetodo');
+ $time = filter_input(INPUT_POST, 'timetodo');
+ $status = "incomplete";
+ $addtask = addlist($user_id,$description,$task,$date,$time,$status);
+      if($addtask == true){
+      $result = finditems($_COOKIE['my_id']);
+      $result2 = done_Items($_COOKIE['my_id']);
+      include('list_item.php');
+      }
+
+}
+
 
 
 
