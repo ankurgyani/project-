@@ -60,6 +60,13 @@ if($action == "show_login_page")
 
 }
 
+else if($action == 'edit'){
+     $editid = filter_input(INPUT_POST, 'user_id');
+  
+     $result3 = fetchTask($editid);
+     include('edit.php');
+   }
+
 
 
 
