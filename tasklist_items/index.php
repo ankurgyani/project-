@@ -66,6 +66,18 @@ else if($action == 'edit'){
      $result3 = fetchTask($editid);
      include('edit.php');
    }
+   else if ($action == 'delete'){
+    
+     $taskid = filter_input(INPUT_POST, 'user_id');
+    
+     $task = delete($taskid);
+     if($task == true){
+     $result = finditems($_COOKIE['my_id']);
+     $result2 = done_Items($_COOKIE['my_id']);
+     include('list_item.php');
+   
+     }
+     }
 
 
 
