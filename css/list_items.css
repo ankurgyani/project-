@@ -1,7 +1,7 @@
-<html>
-<style>
-body{
-  background:url(http://wallpapercave.com/wp/0ckPWb2.jpg);
+
+.bg{
+
+    text-align: center;
 }
 
 table {
@@ -28,16 +28,16 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    text-align: center;
 }
 input[type=submit]:hover {
     background-color: #729edc;
     }
 .welcome{
-background:#4c75af;
+background-color: #76b174;
 }
 h1 {
 font-family: cursive;
-color: #fff;
 text-align: center;
 }
 h2{
@@ -54,7 +54,3 @@ font-family: cursive;
 color: #fff;
 text-align: rigth;
 }
-
-
-
-</style>
