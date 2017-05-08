@@ -78,8 +78,30 @@ else if($action == 'edit'){
    
      }
      }
+     else if ($action == 'new_task'){
+     $etask = filter_input(INPUT_POST, 'edtask');
+     $edescription = filter_input(INPUT_POST, 'edescription');
+     $edate = filter_input(INPUT_POST, 'date');
+     $etime = filter_input(INPUT_POST, 'time');
+     $eid = filter_input(INPUT_POST, 'user_id');
+    $editvalue = edit($etask,$edescription,$etime,$edate,$eid);
+     if($editvalue == true){
+     $result = finditems($_COOKIE['my_id']);
+     $result2 = done_Items($_COOKIE['my_id']);
+     include('list_item.php');
+   
+     }
 
+}
 
-
-
+else if ($action == 'complete_task'){
+      $id = filter_input(INPUT_POST, 'user_id');
+      $status = "complete";
+      $statusupdate = checked($status,$id);
+      if($statusupdate == true){
+         $result = finditems($_COOKIE['my_id']);
+         $result2 = done_Items($_COOKIE['my_id']);
+	 include('list_item.php');
+     }
+     }
 ?>
