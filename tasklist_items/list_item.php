@@ -9,8 +9,12 @@
  <h1> To do list system</h1>
   <p> Welcome,<?php echo $_COOKIE['login']?></p>
   </div>
-   <h2><strong>Task To  Be Completed</strong></h2>
-    <table>
+  <h2><strong>2do!!</strong></h2><br>
+  <form class='bg' method = 'post' action='add.php'>
+  <input type="submit" value="+"/>
+    </form>
+<br>  
+       <table>
        <tr>
       <th style="text-align: center;">Task</th>
       <th style="text-align: center;">Description</th>
@@ -50,9 +54,7 @@
 	<?php endforeach;?>
       
     </table>
-      <form method = 'post' action='add.php'>
-   <br> <input type="submit" value="Add Task"/>
-    </form>
+      
  <h3><strong>Done Tasks</strong></h3>
     <table>
            <tr>
