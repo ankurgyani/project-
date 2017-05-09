@@ -1,5 +1,5 @@
 <?php
-echo "<h1> User Name Already Exist</h1><br/>";
+echo "<h1><strong> Sorry , User Name Already Exist</strong></h1><br/>";
 ?>
 <html>
 <body>
