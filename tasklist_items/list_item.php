@@ -7,7 +7,7 @@
   <body>
   <div class="welcome">
  <h1> To do list system</h1>
-  <p> Welcome,<?php echo $_COOKIE['login']?></p>
+  <strong> <p> Welcome, <?php $fname = $_SESSION['first_name']; echo $fname;?> <?php $lname = $_SESSION['last_name']; echo $lname;?></p></strong>
   </div>
   <h2><strong>2do!!</strong></h2><br>
   <form class='bg' method = 'post' action='add.php'>
